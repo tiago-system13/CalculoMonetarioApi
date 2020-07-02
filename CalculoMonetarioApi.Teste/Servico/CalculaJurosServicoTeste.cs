@@ -39,20 +39,6 @@ namespace CalculoMonetarioApi.Teste.Servico
             var resultado = servico.CalcularJuros(tempo, valorInicial);
 
             Assert.AreEqual(valorFinal, resultado);
-        }
-
-        [TestCase(100.09890, 2, 100.09)]
-        public void TruncateDecimail_CasaDecimalMenorQueZero(decimal valorInicial, int casaDecimal, decimal resultado)
-        {
-            var valorCalculado = servico.TruncateDecimail(valorInicial, casaDecimal);
-            Assert.AreEqual(resultado, valorCalculado);
-        }
-
-        [TestCase(100, -1)]
-        public void TruncateDecimail_Exception_CasaDecimalMenorQueZero(decimal valorInicial, int casaDecimal)
-        {
-            var ex = Assert.Throws<ArgumentException>(() => servico.TruncateDecimail(valorInicial, casaDecimal));
-            Assert.That(ex.Message, Is.EqualTo("decimalPlaces deve ser maior ou igual a 0."));
-        }
+        }       
     }
 }

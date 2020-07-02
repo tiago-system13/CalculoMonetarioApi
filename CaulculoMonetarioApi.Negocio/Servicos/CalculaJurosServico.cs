@@ -1,5 +1,6 @@
 ﻿using CaulculoMonetarioApi.Negocio.Interfaces;
 using CaulculoMonetarioApi.Negocio.Servicos.Interfaces;
+using CaulculoMonetarioApi.Negocio.Utilidades;
 using System;
 
 namespace CaulculoMonetarioApi.Negocio.Servicos
@@ -21,16 +22,9 @@ namespace CaulculoMonetarioApi.Negocio.Servicos
 
             var montante = valorInicial * (decimal)Math.Pow(juros,tempo);
 
-            return TruncateDecimail(montante, CASAS_DECIMAIS);
+            return Utilidade.TruncateDecimail(montante, CASAS_DECIMAIS);
         }
 
-        public decimal TruncateDecimail( decimal value, int decimalPlaces)
-        {
-            if (decimalPlaces < 0)
-                throw new ArgumentException("decimalPlaces deve ser maior ou igual a 0.");
-
-            var modifier = Convert.ToDecimal(0.5 / Math.Pow(10, decimalPlaces));
-            return Math.Round(value >= 0 ? value - modifier : value + modifier, decimalPlaces);
-        }
+       
     }
 }
