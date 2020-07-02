@@ -37,8 +37,7 @@ namespace CalculoMonetarioApi.Teste.Servico
         {
            return new RepositorioDto()
             {
-                Language = "C#",
-                Login = "tiago",
+                Language = "C#",               
                 Name = "CalculoMonetario",
                 UrlRepositorio = "www.github.com.br"
             };

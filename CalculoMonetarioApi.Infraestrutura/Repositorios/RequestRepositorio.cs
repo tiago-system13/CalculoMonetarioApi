@@ -1,7 +1,6 @@
 ﻿using CaulculoMonetarioApi.Negocio.Interfaces;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace CalculoMonetarioApi.Infraestrutura.Repositorios
@@ -27,9 +26,9 @@ namespace CalculoMonetarioApi.Infraestrutura.Repositorios
         {
             var response =  client.GetStreamAsync(uri); 
 
-            var resultResponse = await JsonSerializer.DeserializeAsync<T>(await response);
+            var resultResponse = await System.Text.Json.JsonSerializer.DeserializeAsync<T>(await response);
 
             return resultResponse; 
-        }
+        }             
     }
 }

@@ -6,3 +6,5 @@ services:
     build:
       context: .
       dockerfile: CalculoMonetarioApi/Dockerfile
+    ports:
+          - "44331:80"
