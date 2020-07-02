@@ -18,7 +18,7 @@ namespace CalculoMonetarioApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcCore().AddApiExplorer();
-
+            
             services.AddCors(options =>
             {
                 options.AddPolicy("MyCors", builder =>
@@ -26,7 +26,9 @@ namespace CalculoMonetarioApi
                     builder
                         .AllowAnyOrigin()
                         .AllowAnyHeader()
-                        .AllowAnyMethod();
+                        .AllowAnyMethod()
+                        .WithOrigins("https://localhost:44395/taxaJuros", "https://api.github.com");
+                       
                 });
             });
 

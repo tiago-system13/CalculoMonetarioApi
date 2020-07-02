@@ -15,7 +15,6 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "TAXA_JUROS": "0,01",
-        "CASAS_DECIMAIS": "2",
         "URI_JUROS": "https://localhost:44395/taxaJuros",
         "BASE_URL_GITHUB": "https://api.github.com",
         "USUARIO_PADRAO": "tiago-system13",
@@ -29,8 +28,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "TAXA_JUROS": "0,01",
-        "CASAS_DECIMAIS": "2",
-        "URI_JUROS": "https://localhost:44395/taxaJuros",
+        "URI_JUROS": "https://localhost:5001/taxaJuros",
         "BASE_URL_GITHUB": "https://api.github.com",
         "USUARIO_PADRAO": "tiago-system13",
         "NOME_REPOSITORIO": "CalculoMonetarioApi"
@@ -42,7 +40,15 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "publishAllPorts": true,
-      "useSSL": true
+      "useSSL": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "TAXA_JUROS": "0,01",
+        "URI_JUROS": "https://localhost:32784/taxaJuros",
+        "BASE_URL_GITHUB": "https://api.github.com",
+        "USUARIO_PADRAO": "tiago-system13",
+        "NOME_REPOSITORIO": "CalculoMonetarioApi"
+      }
     }
   }
 }
