@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  calculomonetarioapi:
+    image: ${DOCKER_REGISTRY-}calculomonetarioapi
+    build:
+      context: .
+      dockerfile: CalculoMonetarioApi/Dockerfile

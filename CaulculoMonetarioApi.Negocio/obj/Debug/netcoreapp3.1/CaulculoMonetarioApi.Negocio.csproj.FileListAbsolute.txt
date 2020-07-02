@@ -1,0 +1,9 @@
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\bin\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.deps.json
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\bin\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.dll
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\bin\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.pdb
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\obj\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\obj\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.AssemblyInfoInputs.cache
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\obj\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.AssemblyInfo.cs
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\obj\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.dll
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\obj\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.pdb
+C:\Users\Tiago.Santana\source\repos\CalculoMonetarioApi\CaulculoMonetarioApi.Negocio\obj\Debug\netcoreapp3.1\CaulculoMonetarioApi.Negocio.csprojAssemblyReference.cache
