@@ -7,13 +7,12 @@ services:
     build:
       context: .
       dockerfile: CalculoMonetarioApi/Dockerfile
-    environment:
-      TZ: America/Sao_Paulo 
     ports:
         - "44324:80"
     networks:
       - calculoMonetarioApi-network
     environment:
+      -  TZ: America/Sao_Paulo 
       - ASPNETCORE_ENVIRONMENT= "Development",
       - TAXA_JUROS= "0.01",
       - URI_JUROS= calculoMonetarioApi-network/taxaJuros,
