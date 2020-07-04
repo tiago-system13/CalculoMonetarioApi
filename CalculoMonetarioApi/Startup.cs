@@ -1,3 +1,4 @@
+using CalculoMonetarioApi.Filtros;
 using CalculoMonetarioApi.Infraestrutura.Repositorios;
 using CaulculoMonetarioApi.Negocio.Interfaces;
 using CaulculoMonetarioApi.Negocio.Servicos;
@@ -17,7 +18,7 @@ namespace CalculoMonetarioApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvcCore().AddApiExplorer();
+            services.AddMvcCore(options => options.Filters.Add(typeof(ExceptionHandlerFilterAttribute))).AddApiExplorer();
             
             services.AddCors(options =>
             {
