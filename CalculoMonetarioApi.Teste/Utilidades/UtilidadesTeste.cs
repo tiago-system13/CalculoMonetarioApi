@@ -1,14 +1,13 @@
 ﻿using CaulculoMonetarioApi.Negocio.Utilidades;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CalculoMonetarioApi.Teste.Utilidades
 {
     public class UtilidadesTeste
     {
         [TestCase(100.09890, 2, 100.09)]
+        [TestCase(100.9076576, 2, 100.90)]       
         public void TruncateDecimail_CasaDecimalMenorQueZero(decimal valorInicial, int casaDecimal, decimal resultado)
         {
             var valorCalculado = Utilidade.TruncateDecimail(valorInicial, casaDecimal);

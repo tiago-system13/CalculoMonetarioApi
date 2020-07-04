@@ -7,19 +7,18 @@ services:
     build:
       context: .
       dockerfile: CalculoMonetarioApi/Dockerfile
+    environment:
+      TZ: America/Sao_Paulo  
+      ASPNETCORE_ENVIRONMENT: "Development"
+      TAXA_JUROS: "0,01"
+      URI_JUROS: "http://localhost:44324/taxaJuros"
+      BASE_URL_GITHUB: "https://api.github.com"
+      USUARIO_PADRAO: "tiago-system13"
+      NOME_REPOSITORIO: "CalculoMonetarioApi"
     ports:
         - "44324:80"
     networks:
-      - calculoMonetarioApi-network
-    environment:
-      -  TZ: America/Sao_Paulo 
-      - ASPNETCORE_ENVIRONMENT= "Development",
-      - TAXA_JUROS= "0.01",
-      - URI_JUROS= calculoMonetarioApi-network/taxaJuros,
-      - BASE_URL_GITHUB= "https://api.github.com",
-      - USUARIO_PADRAO= "tiago-system13",
-      - NOME_REPOSITORIO"= "CalculoMonetarioApi"
-
+      - calculoMonetarioApi-network   
 networks:
   calculoMonetarioApi-network:
     driver: bridge
