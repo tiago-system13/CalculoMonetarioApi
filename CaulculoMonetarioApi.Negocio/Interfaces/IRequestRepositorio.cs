@@ -7,6 +7,7 @@ namespace CaulculoMonetarioApi.Negocio.Interfaces
     {
         HttpClient CreateClient();
 
-        Task<T> Execute(HttpClient client, string uri);       
+        Task<T> Execute(HttpClient client, string uri);
+        Task<string> GetVsAsync(HttpClient httpClientInstance, string uri);
     }
 }

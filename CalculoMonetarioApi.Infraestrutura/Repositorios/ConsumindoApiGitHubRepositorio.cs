@@ -4,7 +4,6 @@ using CaulculoMonetarioApi.Negocio.Interfaces;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 
 namespace CalculoMonetarioApi.Infraestrutura.Repositorios
 {
@@ -20,14 +19,8 @@ namespace CalculoMonetarioApi.Infraestrutura.Repositorios
         {
 
             var httpClientInstance = _requestRepositorio.CreateClient();
-            httpClientInstance.DefaultRequestHeaders.Accept.Clear();
-            httpClientInstance.DefaultRequestHeaders.ConnectionClose = false;
-            httpClientInstance.DefaultRequestHeaders.Add("User-Agent", "Calculo-Monetario");
 
-            var request = new HttpRequestMessage(HttpMethod.Get, $"{EnvConstants.BASE_URL_GITHUB}/users/{EnvConstants.USUARIO_PADRAO}/repos");
-            request.Headers.Add("Accept", "application/vnd.github.v3+json");
-
-            var jsonString = httpClientInstance.SendAsync(request).Result.Content.ReadAsStringAsync().Result;
+            var jsonString = _requestRepositorio.GetVsAsync(httpClientInstance, $"{EnvConstants.BASE_URL_GITHUB}/users/{EnvConstants.USUARIO_PADRAO}/repos").Result;
 
             var resultadoResponse = JsonConvert.DeserializeObject<List<RepositorioDto>>(jsonString);
 

@@ -18,6 +18,8 @@ namespace CalculoMonetarioApi.Infraestrutura.Repositorios
             HttpClient client = new HttpClient(clientHandler);
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.ConnectionClose = false;
+            client.DefaultRequestHeaders.Add("User-Agent", "Calculo-Monetario");
 
             return client;
         }
@@ -29,6 +31,15 @@ namespace CalculoMonetarioApi.Infraestrutura.Repositorios
             var resultResponse = await System.Text.Json.JsonSerializer.DeserializeAsync<T>(await response);
 
             return resultResponse; 
-        }             
+        }     
+        
+        public async Task<string> GetVsAsync(HttpClient httpClientInstance,string uri)
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get, uri);
+            request.Headers.Add("Accept", "application/vnd.github.v3+json");
+
+            return await httpClientInstance.SendAsync(request).Result.Content.ReadAsStringAsync();
+        }
+
     }
 }
